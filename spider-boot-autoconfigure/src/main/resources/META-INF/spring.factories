@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.github.txq.spider.boot.autoconfigure.TemplateSourceAutoConfiguration,\
+  org.github.txq.spider.boot.autoconfigure.MessageAutoConfiguration

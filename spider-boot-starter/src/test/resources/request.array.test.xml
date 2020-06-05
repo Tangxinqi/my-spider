@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-request PUBLIC "TTM" "http://localhost:9528/static/template.request.dtd" >
+<template-request>
+    <template-array separator="|" open="(" close=")">
+        <template-text>${param1}</template-text>
+        <template-text>${param2}</template-text>
+        <template-text>${param3}</template-text>
+        <template-text>${param4}</template-text>
+    </template-array>
+</template-request>

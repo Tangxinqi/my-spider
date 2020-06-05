@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-response PUBLIC "TTM" "http://localhost:9528/static/template.response.dtd" >
+<template-response>
+    <!-- 将返回值中key1,key2,key3进行拼接   -->
+    <template-text id="text1" depend-on="key1,key2,key3" type-handler="TEST_TEXT_TYPE_HANDLER" separator="," open="("
+                   close=")"/>
+    <result-set>
+        <!--不能动，呼死你-->
+        <result-key name="result">${text1}</result-key>
+    </result-set>
+</template-response>

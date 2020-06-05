@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-request PUBLIC "TTM" "http://localhost:9528/static/template.request.dtd" >
+<template-request>
+    <template-text>
+        <template-text id="suffix" ignore="true">test</template-text>
+        <template-text>
+            TEST_ + ${suffix} + ${@org.apache.commons.lang3.StringUtils@leftPad(suffix,10,'0')}
+        </template-text>
+    </template-text>
+</template-request>

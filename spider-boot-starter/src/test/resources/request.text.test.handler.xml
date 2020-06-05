@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-request PUBLIC "TTM" "http://localhost:9528/static/template.request.dtd" >
+<template-request>
+    <template-text type-handler="TEST_TEXT_TYPE_HANDLER">test.content</template-text>
+</template-request>

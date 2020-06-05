@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!--        -->
+
+        <!ELEMENT template-response ((template-text | template-xml | template-object | template-array)*, result-set)>
+        <!ELEMENT template-text (template-text | template-xml | template-array | template-object)*>
+        <!ATTLIST template-text
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                depend-on CDATA #IMPLIED
+                type-handler CDATA #IMPLIED
+                separator CDATA #IMPLIED
+                open CDATA #IMPLIED
+                close CDATA #IMPLIED
+                >
+
+        <!ELEMENT template-xml (value*)>
+        <!ATTLIST template-xml
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                depend-on CDATA #IMPLIED
+                type-handler CDATA #IMPLIED
+                >
+        <!ELEMENT template-object (value*)>
+        <!ATTLIST template-object
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                depend-on CDATA #IMPLIED
+                type CDATA #IMPLIED
+                >
+        <!ELEMENT template-array (value*)>
+        <!ATTLIST template-array
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                depend-on CDATA #IMPLIED
+                type-handler CDATA #IMPLIED
+                separator CDATA #IMPLIED
+                open CDATA #IMPLIED
+                close CDATA #IMPLIED
+                >
+        <!ELEMENT value EMPTY>
+        <!ATTLIST value
+                id CDATA #REQUIRED
+                path CDATA #REQUIRED
+                >
+        <!ELEMENT result-set (result-key)+>
+        <!ATTLIST result-set
+                type CDATA #IMPLIED
+                >
+        <!ELEMENT result-key (#PCDATA)>
+        <!ATTLIST result-key
+                name CDATA #IMPLIED
+                >
+

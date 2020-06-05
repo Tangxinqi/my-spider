@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-response PUBLIC "TTM" "http://localhost:9528/static/template.response.dtd" >
+<template-response>
+    <template-array separator="\|" open="(" close=")">
+        <value id="value1" path="$[0]"/>
+        <value id="value2" path="$[1]"/>
+        <value id="value3" path="$[2]"/>
+        <value id="value4" path="$[3]"/>
+    </template-array>
+    <result-set>
+        <result-key name="key1">${value1}</result-key>
+        <result-key name="key2">${value2}</result-key>
+        <result-key name="key3">${value3}</result-key>
+        <result-key name="key4">${value4}</result-key>
+    </result-set>
+</template-response>

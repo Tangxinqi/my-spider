@@ -1,0 +1,7 @@
+dependencies {
+    compile "ognl:ognl:3.2.14"
+    compile "org.dom4j:dom4j:2.1.1"
+
+    compile(project(":spider-jtbc"))
+
+}

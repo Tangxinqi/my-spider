@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!--        -->
+
+        <!ELEMENT template-request (template-text | template-map | template-json | template-xml | template-object | template-array) >
+        <!ELEMENT template-text (#PCDATA | template-text | template-json | template-xml | template-array | foreach)*>
+        <!ATTLIST template-text
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                type-handler CDATA #IMPLIED
+                >
+        <!ELEMENT template-map (key+)>
+        <!ATTLIST template-map
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                >
+        <!ELEMENT template-json (key+)>
+        <!ATTLIST template-json
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                type-handler CDATA #IMPLIED
+                >
+        <!ELEMENT template-xml (#PCDATA | key | foreach)*>
+        <!ATTLIST template-xml
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                type-handler CDATA #IMPLIED
+                >
+        <!ELEMENT template-object (key+)>
+        <!ATTLIST template-object
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                type CDATA #REQUIRED
+                >
+        <!ELEMENT template-array (template-text* | template-map* | template-json* | template-xml* | template-object* | template-array* | key* | foreach)+>
+        <!ATTLIST template-array
+                id CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                depend-on CDATA #IMPLIED
+                ignore (true|false) #IMPLIED
+                type-handler CDATA #IMPLIED
+                separator CDATA #IMPLIED
+                open CDATA #IMPLIED
+                close CDATA #IMPLIED
+                >
+        <!ELEMENT foreach (#PCDATA| template-text | template-map | template-json | template-xml | template-object | template-array)*>
+        <!ATTLIST foreach
+                collection CDATA #REQUIRED
+                t-if CDATA #IMPLIED
+                item CDATA #REQUIRED
+                >
+        <!ELEMENT key (#PCDATA | template-text | template-map | template-json | template-xml | template-object | template-array | key)*>
+        <!ATTLIST key
+                name CDATA #IMPLIED
+                t-if CDATA #IMPLIED
+                >

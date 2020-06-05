@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-request PUBLIC "TTM" "http://localhost:9528/static/template.request.dtd" >
+<template-request>
+    <template-xml>
+        <![CDATA[<?xml version="1.0" encoding="UTF-8" ?>]]>
+        <key name="xml">
+            <key name="test1">
+                <key name="test1_test1">content1</key>
+                <key name="test1_test2"/>
+            </key>
+            <key name="test2">content2</key>
+            <key name="test3">content3</key>
+            <key name="test4">content4</key>
+        </key>
+    </template-xml>
+</template-request>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-request PUBLIC "TTM" "http://localhost:9528/static/template.request.dtd" >
+<template-request>
+    <template-object type="com.meituan.pay.supergw.message.boot.starter.test.TestBean">
+        <key name="key1">mapValue1</key>
+        <key name="key2">mapValue2</key>
+        <key name="key3">mapValue3</key>
+        <key name="key4">${param1}</key>
+    </template-object>
+</template-request>

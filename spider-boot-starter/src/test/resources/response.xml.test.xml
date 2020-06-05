@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE template-response PUBLIC "TTM" "http://localhost:9528/static/template.response.dtd" >
+<template-response>
+    <template-xml>
+        <value id="test1" path="xml.test1.test1_test1"/>
+        <value id="test2" path="xml.test2"/>
+        <value id="test3" path="xml.test3"/>
+    </template-xml>
+    <result-set>
+        <result-key name="test1">${test1}</result-key>
+        <result-key name="test2">${test2}</result-key>
+        <result-key name="test3">${test3}</result-key>
+    </result-set>
+</template-response>

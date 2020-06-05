@@ -1,0 +1,56 @@
+buildscript {
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+}
+
+version = '1.0.0-SNAPSHOT'
+
+subprojects {
+
+    group "org.github.txq"
+
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'idea'
+    apply plugin: 'application'
+
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    ext {
+        spring_boot_version = "2.3.0.RELEASE"
+        spring_version = "5.2.6.RELEASE"
+    }
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    dependencies {
+        compile "com.google.guava:guava:29.0-jre"
+        compile "com.google.code.gson:gson:2.8.6"
+        compile "org.apache.commons:commons-collections4:4.4"
+        compile "org.apache.commons:commons-lang3:3.10"
+        compile "org.apache.logging.log4j:log4j-core:2.13.3"
+        compile "org.apache.logging.log4j:log4j-api:2.13.3"
+        compile "org.slf4j:slf4j-api:1.7.30"
+
+        compileOnly 'org.projectlombok:lombok:1.18.12'
+        annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+        testCompileOnly 'org.projectlombok:lombok:1.18.12'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+        testImplementation('org.junit.jupiter:junit-jupiter:5.6.2')
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
