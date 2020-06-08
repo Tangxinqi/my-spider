@@ -35,7 +35,7 @@ public class ForEachTplNode extends TplNode {
         if (context.getBindElement(item) != null) {
             throw new RuntimeException();
         }
-        Stream stream = items instanceof Collection ? ((Collection) items).stream() : Stream.of((Object[]) items);
+        Stream<Object> stream = items instanceof Collection ? ((Collection<Object>) items).stream() : Stream.of((Object[]) items);
         stream.forEach(t -> {
             DynamicContext childContext = context.stash();
             childContext.registerElement(item, t);

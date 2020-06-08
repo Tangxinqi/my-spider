@@ -12,15 +12,15 @@ import java.util.Map;
  */
 public class ExpressionCompiler {
 
-    private static final Map<String, Expression> EXPRESSION_CACHE = new HashMap<>();
+    private static final Map<String, Expression<?>> EXPRESSION_CACHE = new HashMap<>();
 
-    public static Expression booleanExpression(String expression) {
+    public static Expression<?> booleanExpression(String expression) {
         try {
             if (EXPRESSION_CACHE.containsKey(expression)) {
                 return EXPRESSION_CACHE.get(expression);
             }
             Object exp = Ognl.parseExpression(expression);
-            Expression e = new BooleanExpression(exp);
+            Expression<?> e = new BooleanExpression(exp);
             EXPRESSION_CACHE.put(expression, e);
             return e;
         } catch (Exception e) {
@@ -28,13 +28,13 @@ public class ExpressionCompiler {
         }
     }
 
-    public static Expression javaExpression(String expression) {
+    public static Expression<?> javaExpression(String expression) {
         try {
             if (EXPRESSION_CACHE.containsKey(expression)) {
                 return EXPRESSION_CACHE.get(expression);
             }
             Object exp = Ognl.parseExpression(expression);
-            Expression e = new JavaClassExpression(exp);
+            Expression<?> e = new JavaClassExpression(exp);
             EXPRESSION_CACHE.put(expression, e);
             return e;
         } catch (Exception e) {

@@ -20,8 +20,7 @@ public class JavaClassExpression implements Expression<Object> {
     @Override
     public Object evaluate(Map<String, Object> metaParameter) {
         try {
-            Map context = Ognl.createDefaultContext(metaParameter, ACCESS);
-            return Ognl.getValue(expression, context, metaParameter);
+            return Ognl.getValue(expression, Ognl.createDefaultContext(metaParameter, ACCESS), metaParameter);
         } catch (Exception e) {
             throw new ExpressionProcessException("JavaClassExpression process fail, please check java class or method!", e);
 

@@ -26,7 +26,7 @@ import java.util.stream.Stream;
  */
 public class ResponseTplCompiler extends BaseFormat {
 
-    public ResponseTplCompiler(Element root, Register<TypeHandler> handlerRegister) {
+    public ResponseTplCompiler(Element root, Register<TypeHandler<?>> handlerRegister) {
         this.root = root;
         this.handlerRegister = handlerRegister;
     }
@@ -118,7 +118,7 @@ public class ResponseTplCompiler extends BaseFormat {
 
     private ITplNode doFormatResultSetNode(Element element) {
         String className = getTypeName(element);
-        Class clz;
+        Class<?> clz;
         try {
             clz = StringUtils.isBlank(className) ? null : Class.forName(className);
         } catch (ClassNotFoundException e) {

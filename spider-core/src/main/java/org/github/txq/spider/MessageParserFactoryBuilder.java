@@ -18,7 +18,7 @@ public class MessageParserFactoryBuilder {
 
     private TemplateSource source;
 
-    private Map<String, TypeHandler> typeHandlerRegister;
+    private Map<String, TypeHandler<?>> typeHandlerRegister;
 
     private List<String> templates;
 
@@ -44,7 +44,7 @@ public class MessageParserFactoryBuilder {
         return this;
     }
 
-    public MessageParserFactoryBuilder setTypeHandlerRegister(Map<String, TypeHandler> typeHandlerRegister) {
+    public MessageParserFactoryBuilder setTypeHandlerRegister(Map<String, TypeHandler<?>> typeHandlerRegister) {
         this.typeHandlerRegister = typeHandlerRegister;
         return this;
     }

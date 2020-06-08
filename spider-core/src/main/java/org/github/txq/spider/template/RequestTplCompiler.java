@@ -24,7 +24,7 @@ import org.github.txq.spider.type.TypeHandler;
  */
 public class RequestTplCompiler extends BaseFormat {
 
-    public RequestTplCompiler(Element root, Register<TypeHandler> handlerRegister) {
+    public RequestTplCompiler(Element root, Register<TypeHandler<?>> handlerRegister) {
         this.root = root;
         this.handlerRegister = handlerRegister;
     }
@@ -60,7 +60,6 @@ public class RequestTplCompiler extends BaseFormat {
         }
     }
 
-    @SuppressWarnings("uncheked")
     private ITplNode doFormatTextNode(Element element) {
         String id = getNodeId(element);
         boolean ignore = getIgnoreValue(element);

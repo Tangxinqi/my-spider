@@ -21,8 +21,7 @@ public class BooleanExpression implements Expression<Boolean> {
     @Override
     public Boolean evaluate(Map<String, Object> metaParameter) {
         try {
-            Map context = Ognl.createDefaultContext(metaParameter, ACCESS);
-            Object o = Ognl.getValue(expression, context, metaParameter);
+            Object o = Ognl.getValue(expression, Ognl.createDefaultContext(metaParameter, ACCESS), metaParameter);
             if (o instanceof Boolean) {
                 return (Boolean) o;
             }

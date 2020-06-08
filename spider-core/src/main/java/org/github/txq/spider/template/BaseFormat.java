@@ -50,7 +50,7 @@ public abstract class BaseFormat {
 
     static final Pattern PATTERN = Pattern.compile("\\$\\{.*?}");
 
-    Register<TypeHandler> handlerRegister;
+    Register<TypeHandler<?>> handlerRegister;
 
     Element root;
 
@@ -126,7 +126,7 @@ public abstract class BaseFormat {
         if (StringUtils.isBlank(handlerName)) {
             return null;
         }
-        TypeHandler<T> typeHandler = handlerRegister.lookup(handlerName);
+        TypeHandler<T> typeHandler = (TypeHandler<T>) handlerRegister.lookup(handlerName);
         if (typeHandler == null) {
             throw new TemplateFormatException("TypeHandler[" + handlerName + "] is not exist!");
         }

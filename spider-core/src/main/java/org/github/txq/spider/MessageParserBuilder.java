@@ -19,7 +19,7 @@ public class MessageParserBuilder {
 
     private static final String RESPONSE_TPL = "template-response";
 
-    public Register<TypeHandler> typeHandlerRegister;
+    public Register<TypeHandler<?>> typeHandlerRegister;
 
     public static MessageParserBuilder custom() {
         return new MessageParserBuilder();
@@ -37,7 +37,7 @@ public class MessageParserBuilder {
         }
     }
 
-    public MessageParserBuilder setTypeHandlerRegister(Register<TypeHandler> typeHandlerRegister) {
+    public MessageParserBuilder setTypeHandlerRegister(Register<TypeHandler<?>> typeHandlerRegister) {
         this.typeHandlerRegister = typeHandlerRegister;
         return this;
     }

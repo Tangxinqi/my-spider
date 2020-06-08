@@ -16,6 +16,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -51,7 +52,9 @@ public class MessageSerializerFactoryBean implements ApplicationContextAware, Fa
 
         Map<String, TypeHandler> typeHandlers = context.getBeansOfType(TypeHandler.class);
         if (MapUtils.isNotEmpty(typeHandlers)) {
-            builder.setTypeHandlerRegister(typeHandlers);
+            Map<String, TypeHandler<?>> finalHandlers = new HashMap<>(16);
+            typeHandlers.forEach(finalHandlers::put);
+            builder.setTypeHandlerRegister(finalHandlers);
         }
 
         List<String> tpls = new ArrayList<>();

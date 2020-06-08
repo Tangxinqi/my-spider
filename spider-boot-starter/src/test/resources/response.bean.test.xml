@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE template-response PUBLIC "TTM" "http://localhost:9528/static/template.response.dtd" >
 <template-response>
-    <template-object type="com.meituan.pay.supergw.message.boot.starter.test.TestBean">
+    <template-object type="org.github.txq.spider.boot.starter.test.TestBean">
         <value id="test1" path="key1"/>
         <value id="test2" path="key2"/>
         <value id="test3" path="key3"/>
         <value id="test4" path="key4"/>
     </template-object>
-    <result-set type="com.meituan.pay.supergw.message.boot.starter.test.TestBean">
+    <result-set type="org.github.txq.spider.boot.starter.test.TestBean">
         <result-key name="key1">${test1}</result-key>
         <result-key name="key2">${test2}</result-key>
         <result-key name="key3">${test3}</result-key>

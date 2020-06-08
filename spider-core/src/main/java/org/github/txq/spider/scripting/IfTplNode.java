@@ -9,7 +9,7 @@ import org.github.txq.spider.expression.ExpressionCompiler;
  */
 public class IfTplNode extends TplNode {
 
-    private final Expression expression;
+    private final Expression<?> expression;
 
     public IfTplNode(String expression) {
         this.expression = ExpressionCompiler.booleanExpression(expression);

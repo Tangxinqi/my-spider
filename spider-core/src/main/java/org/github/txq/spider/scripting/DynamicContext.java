@@ -75,7 +75,7 @@ public class DynamicContext {
 
     private static class StackedDynamicContext extends DynamicContext {
 
-        private DynamicContext delegate;
+        private final DynamicContext delegate;
 
         StackedDynamicContext(DynamicContext context, MessageEnvironment environment) {
             this.delegate = context;

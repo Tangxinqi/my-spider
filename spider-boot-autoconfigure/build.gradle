@@ -1,3 +1,7 @@
+pluins {
+    id 'org.springframework.boot' version ${spring_boot_version}
+}
+
 dependencies {
     compile(project(":spider-spring"))
 

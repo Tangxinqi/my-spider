@@ -20,12 +20,12 @@ public class PoolingMessageParserManager implements MessageParserManager {
 
     private final Register<MessageParser> messageParserRegister = new MutableRegistry<>(true);
 
-    private final Register<TypeHandler> typeHandlerRegister;
+    private final Register<TypeHandler<?>> typeHandlerRegister;
 
     private final TemplateSource templateSource;
 
 
-    public PoolingMessageParserManager(Register<TypeHandler> typeHandlerRegister, TemplateSource source) {
+    public PoolingMessageParserManager(Register<TypeHandler<?>> typeHandlerRegister, TemplateSource source) {
         Objects.requireNonNull(source, "TemplateSource can not be null!");
         this.typeHandlerRegister = ObjectUtils.defaultIfNull(typeHandlerRegister, ImmutableRegister.emptyRegister());
         this.templateSource = source;

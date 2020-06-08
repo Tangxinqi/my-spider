@@ -17,7 +17,7 @@ public class QuoteTplNode implements ITplNode {
 
     private final String quote;
 
-    private final Expression expression;
+    private final Expression<?> expression;
 
     private static final String FILTER_PREFIX = "@";
 
