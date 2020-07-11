@@ -1,5 +1,4 @@
 buildscript {
-
     repositories {
         mavenLocal()
         mavenCentral()
@@ -17,7 +16,6 @@ subprojects {
     apply plugin: 'maven'
     apply plugin: 'idea'
     apply plugin: 'application'
-
 
     sourceCompatibility = JavaVersion.VERSION_1_8
     targetCompatibility = JavaVersion.VERSION_1_8
