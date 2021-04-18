@@ -1,6 +1,7 @@
 dependencies {
-    compile(project(":spider-boot-autoconfigure"))
 
-    testCompile "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
+    api(project(":spider-boot-autoconfigure"))
+
+    testImplementation "org.springframework.boot:spring-boot-starter-test:${spring_boot_version}"
 
 }

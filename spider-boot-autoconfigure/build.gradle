@@ -1,8 +1,8 @@
 dependencies {
-    compile(project(":spider-spring"))
+    api(project(":spider-spring"))
 
-    compile "org.springframework:spring-beans:${spring_version}"
-    compile "org.springframework.boot:spring-boot-autoconfigure:${spring_boot_version}"
-    compile "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
-    compile "org.springframework.boot:spring-boot:${spring_boot_version}"
+    api "org.springframework:spring-beans:${spring_version}"
+    api "org.springframework.boot:spring-boot-autoconfigure:${spring_boot_version}"
+    api "org.springframework.boot:spring-boot-configuration-processor:${spring_boot_version}"
+    api "org.springframework.boot:spring-boot:${spring_boot_version}"
 }
